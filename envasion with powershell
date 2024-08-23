@@ -1,0 +1,19 @@
+$code = {
+    $command = "Get-Process | Where-Object { $_.CPU -gt 100 }"
+    Invoke-Expression $command
+}
+
+function Obfuscate-Code {
+    param ([ScriptBlock]$script)
+    $encoded = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($script.ToString()))
+    return $encoded
+}
+
+function Execute-Polymorphic {
+    $obfuscated = Obfuscate-Code $code
+    $decoded = [System.Text.Encoding]::Unicode.GetString([Convert]::FromBase64String($obfuscated))
+    Invoke-Expression $decoded
+}
+
+# Example usage
+Execute-Polymorphic
