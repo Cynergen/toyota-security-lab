@@ -1,2 +1,2 @@
 # toyota-security-lab
-hello thank you for tuning in these are providing real world scenarios with examples of discovered vulnerabilities.This is for educational purposes only and is using this unethically can result in sentencing with results from penalties. 
+hello thank you for tuning in these are providing real world scenarios with examples of discovered vulnerabilities.This is for educational purposes only and is using this unethically can result in sentencing with results from penalties. This repsoitory contains security configurations and practices specifically designed for vendors system.The goal is to aim at enchancing security across various area including clickjacking prevention,CSRF ssl/tls configurations and more
